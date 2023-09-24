@@ -1,8 +1,9 @@
 import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type {Metadata} from 'next'
+import {Inter} from 'next/font/google'
+import Header from "@/components/common/Layout/Header";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
   title: 'Project Car',
@@ -10,15 +11,19 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body
-          // style={{background: '#121212', color: "#d4d4d4"}}
-          className={inter.className}>{children}</body>
+    <body
+      // style={{background: '#121212', color: "#d4d4d4"}}
+      className={inter.className}
+    >
+    <Header/>
+    {children}
+    </body>
     </html>
   )
 }
