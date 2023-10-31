@@ -4,8 +4,8 @@ import FuelGif from '../../public/gif/eco-fuel.gif'
 import RpmGif from '../../public/gif/rpm.gif'
 import MileageGif from '../../public/gif/mileage.gif'
 
-export default function ListingCard(props: any) {
-  const { img } = props
+const ListingCard = (props: any) => {
+  const {img} = props
   return (
     <div
       className="overflow-hidden my-3 mr-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -59,3 +59,5 @@ export default function ListingCard(props: any) {
 
   )
 }
+
+export default ListingCard
