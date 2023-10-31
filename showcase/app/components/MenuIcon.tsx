@@ -1,8 +1,9 @@
 "use client"
-import {useState} from "react";
+import React, {useState} from 'react'
+import "../../styles/components/menuItem.css"
 
-function MenuIcon() {
-  const [isOpen, setIsOpen] = useState(false) as any;
+const MenuIcon = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
